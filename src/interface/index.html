@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>Mikuna</title>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+            <link href="style.css" rel="stylesheet">
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+            <script type="module" src="main.js"></script>
+    </head>
+    <body>
+        <div class="contenedorPaginaInicial" id="contPaginaInicial">
+            <div class="paginaInicial">
+                <div class="contenedorLogoTexto">
+                    <img src="./img/LogoVerdeNoTenedor.png" alt="M de logo"  id="logoVerdeNoTenedor">         
+                    <div class="contenedorIkuna">
+                        <p id="tituloMikuna">ikuna</p>
+                    </div>     
+                </div>   
+                <div class="contenedorForm">  
+                    <div class="contenedorTexto">
+                        <p class="bienvenido">Bienvenido</p>
+                        <p class="textoBienvenida">Por favor, ingrese su nombre completo </p>
+                    </div>   
+                    <div class="cajaNombreYApellido" >   
+                        <form class="cajaInput" id="formNombreYApellido">
+                            <label for="inputNombreYApellido" id="nombreApellido">Nombre y Apellido</label>
+                            <input type="text" class="form-control" id="inputNombreYApellido" required maxlength="25" ></input>
+                            <button type="button" id="botonGuardar" class="btn">Guardar</button>
+                        </form>
+                    </div>    
+                </div>  
+            </div>
+        </div>
+        <div class="contenedorTodo" id="app">
+            <div class="sidebar">
+                <div class="logoVerde">
+                    <img src="./img/logoVerde.png" alt="Logo de Mikuna"  class="logoConTenedorNav">
+                </div>
+                <button class="btn" id="botonMenu"><i id="logoMenu" class="bi bi-shop " alt="Menúes"></i></button>
+                <button class="btn" id="botonUser"><i id="logoUser" class="bi bi-person-fill " alt="Usuario"></i></button>
+                <button class="btn" id="botonOrdenes"><i id="logoOrdenes" class="bi bi-archive-fill " alt="Órdenes"></i></button>      
+            </div>
+            <div class="contenedorCarrito">
+                <button class="btn" id="botonCarrito"><i id="logoCarrito" class="bi bi-bag-fill " alt="Carrito"></i></button>
+            </div>
+            <div class="contenedorMenu" id="contenedorMenu">
+                    <div class="parteSuperior">
+                        <div class="infoUserFecha">
+                            <div class="fechaComensal">
+                                <div class="fecha">
+                                    <h4>Fecha:</h4>
+                                    <div class="botonesYFecha">
+                                        <button class="btn" id="botonDiaMenos"><i class="bi bi-caret-left-fill"></i></button>
+                                        <span id="contenedorFecha"></span>
+                                         <button class="btn" id="botonDiaMas"><i class="bi bi-caret-right-fill"></i></button>
+                                    </div>
+                                </div>
+                                 <div class="infoUser"> 
+                                        <p class="nombreUsuario" id="nombreUserMenu">Nombre</p><!--poner circulito verde-->
+                                        <p class="saldoRestante">Saldo Restante: $<span id="saldo">4760</span></p>
+                                        <button type="button" id="botonAgregarFondos" class="btn">Agregar fondos</button>
+                                 </div>
+                            </div> 
+                            <div class="contenedorComensalMenu" id="contenedorComensalMenu">
+                                <div id="contenedorComboComensales" class=" contenedorComboComensales ">
+                                    <ul id="comboComensalesMenu" class="dropdown-menu position-static d-grid gap-1 p-2 rounded-3 mx-0 shadow " >
+                                    </ul>
+                                </div>
+                                
+                            </div>
+                        </div>            
+                        <div class="menuDelDia">
+                            <h2>Menú del día <span id="diaDeHoy"> 14-6-2023</span></h2>
+                            <p class="letraMenu">Menú: <span  class="letraMenuSpan"id="menuDia">Menu</span></p>
+                            <p class="letraMenu">Guarnición: <span class="letraMenuSpan" id="guarnicionDia">Guarnicion</span></p>
+                            <p class="letraMenu">Postre: <span class="letraMenuSpan" id="postreDia">Postre</span></p>
+                            <p class="letraMenu">Precio: $<span class="letraMenuSpan" id="precioDia">Precio</span></p>
+                            <button type="button" id="botonMenuDelDia" class="btn">Agregar al carrito</button>
+                        </div>
+                    </div>
+                    <div class="catalogo">
+                        <div class="menuAlternativo">
+                            <div class="contenedorMenues container">
+                                <div class="tituloMenuesAlt">
+                                    <h2>Menues Alternativos</h2>
+                                </div>
+                                <div id="rowMenuAlt"class="row">   
+                                    
+                                </div>    
+                            </div>
+                        </div>
+                        <div class="meriendas">
+                            <div class="listaMeriendas container">
+                                <div class="tituloMeriendas">
+                                    <h2>Meriendas</h2>
+                                </div>
+                                <div id="rowMerienda" class="row">    
+                                    
+                                </div>    
+                            </div>
+                        </div>
+                    </div> 
+                      
+            </div>
+            <div class="contenedorCarritoDeCompras" id="contenedorCarritoDeCompras">
+                <div class="carritoDeCompras">
+                    <div class="contenedorTituloCarrito">
+                        <h1>Carrito de  compras</h1>
+                    </div>
+                    <div class="contenedorBodyCarrito">
+                        <div class="contenidosCarrito">
+                            <div class="container elementosCarrito">
+                                <div id="rowCarrito" class="row">
+                                    <h3>Carrito Vacio!</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="resumen">
+                            <div class="parteArribaResumen">
+                                <div class="contenedorTituloResumen">
+                                    <h2>Resumen</h2>
+                                </div>
+                                <div class="nombrePrecioProducto">
+                                    <div id="resumenNombres"class="nombreProductos">
+                                    </div>
+                                    <div id="resumenPrecios"class="precioProductos">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="parteAbajoResumen">
+                                <div class="contenedorTotal">
+                                    <div class="totalI">
+                                        <p class="totalTexto">Total:</p>
+                                    </div>
+                                    <div class="totalD">
+                                        <p class="totalSimbolo">$<span id="totalNumero">0</span></span></p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <button type="button" id="botonPagar" class="btn">Pagar</button>
+                                </div>
+                            </div>    
+                        </div>
+                    </div>    
+                </div>        
+            </div>
+            <div class="modal" id="modalAgregarComensal" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Agregar Comensal</h5>
+                    </div>
+                    <div class="modal-body">
+                        <form class="" id="formComensales">
+                            <label for="inputNombreYApellidoComensal" id="nombreApellidoComensal">Nombre y Apellido</label>
+                            <input type="text" class="form-control" id="inputNombreYApellidoComensal" maxlength="25" ></input>
+                            <label for="inputCursoComensal" id="curso">Curso</label>
+                            <input type="number" class="form-control" id="inputCursoComensal"  max="6" min="1"required ></input>
+                            <br>
+                            <input class="form-check-input" type="radio" name="PoS" id="Primaria" checked>
+                            <label class="form-check-label" for="Primaria"> Primaria</label>
+                            <input class="form-check-input" type="radio" name="PoS" id="Secundaria">
+                            <label class="form-check-label" for="Secundaria"> Secundaria</label>
+                            <br>
+                            <br>
+                            <button type="button" id="botonCerrarModal" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                            <button type="button" id="botonAgregarComensal"class="btn btn-primary">Agregar</button>
+                        </form>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="contenedorUser" id="contenedorUser">  
+                <div class="perfil">
+                    <div class="contenedorMensaje" id="contenedorMensaje">
+                        <h5>Bienvenido, <span id="nombreUserUser">NombreDefault</h3>
+                        <p>Gracias por utilizar Mikuna,  aquí encontrarás una manera práctica y rápida de gestionar sus pedidos de alimentos deliciosos y nutritivos. ¡Prepárense para disfrutar de una experiencia gastronómica única en la que la calidad y la conveniencia van de la mano!</p>
+                    </div>
+                    <div class="contenedorComensales" id="contenedorComensales">
+                        <div id="contenedorComboComensalesUser" class=" d-flex flex-column flex-md-row p-4 gap-4 py-md-5 align-items-center justify-content-center ">
+                            <ul id="comboComensalesUser" class="dropdown-menu position-static d-grid gap-1 p-2 rounded-3 mx-0 shadow" >
+                              <li><a class="dropdown-item rounded-2 active" id="" href="#">A</a></li>
+                              <li><a class="dropdown-item rounded-2" href="#">B</a></li>
+                              <li><a class="dropdown-item rounded-2" href="#">C</a></li>
+                              <li><hr class="dropdown-divider"></li>
+                              <li><a class="dropdown-item rounded-2" href="#">Agregar Comensal</a></li>
+                            </ul>
+                        </div>
+                    </div>   
+                </div>
+            </div>
+            <div class="contenedorResumenDeCompra" id="contenedorResumenDeCompra">
+                <div class="contenedorOrdenes">
+                    <div class="contenedorTituloOrdenes">
+                        <h1 class="titulosOrdenes"> Resumen de Órdenes </h1>
+                    </div>  
+                    <br>
+                    <div class="ordenesPendientes">   
+                        <h2 class="titulosOrdenes">Órdenes Pendientes</h2>
+                        <table class="table table-hover table-responsive">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Nombre Producto</th>
+                                    <th scope="col">Precio</th>
+                                    <th scope="col">Comensal</th>
+                                    <th scope="col">Fecha</th>
+                                    <th scope="col">Cancelar</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tablaOrdenesPendientes">
+                                
+                            </tbody>
+                        </table>
+                    </div>    
+                    <br>
+                    <div class="ordenesRealizadas">
+                        <h2 class="titulosOrdenes">Órdenes Realizadas</h2>
+                        <table class="table table-hover table-responsive" >
+                            <thead>
+                                <tr>
+                                    <th scope="col">Nombre Producto</th>
+                                    <th scope="col">Precio</th>
+                                    <th scope="col">Comensal</th>
+                                    <th scope="col">Fecha</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tablaOrdenesRealizadas">
+                                
+                            </tbody>   
+                        </table>
+                     </div>   
+                </div>    
+            </div>
+        </div>
+    </body>      
+</html>

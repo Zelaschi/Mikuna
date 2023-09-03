@@ -1,0 +1,885 @@
+/*General*/
+body{
+    background-color: #091e0a;
+    color:white;
+}
+i{
+    height: 3rem;
+    width: 3rem;
+}
+a{
+    font-size:1.5vw;
+}
+p{
+    font-size:3vh;
+    margin-bottom: 0;
+}
+h1{
+    font-size: 4vw;
+}
+h2{
+    font-size:3vw;
+    margin-bottom:3px;
+}
+h5{
+    font-size: 4vh;
+}
+.btn{
+    font-size:1.7vw;
+}
+h4{
+    font-size: 3vh;
+}
+.menu{
+
+    margin-left: 2rem;
+}
+#app{
+    display: inline;
+    font-family: 'Roboto';
+}
+.contenedorMenu{
+    justify-content: center;
+    align-items: center;
+    color:white;
+    margin: 1rem;
+    margin-left: 6rem;
+}
+.fotoItem{
+    width: 100%;
+    border-radius: 0.5rem;
+}
+
+
+.menuDelDia{
+    background-color: #0D310F;
+    width: 40%;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 0.5rem;
+}
+
+
+
+.btnCatalogoMenu{
+    color:white;
+    background-color: #1b5e20;
+    width: 100%;
+}
+
+#botonMenuDelDia{
+    color:white;
+    background-color: #1b5e20;
+    width: 100%;
+}
+
+
+#saldo{
+    font-weight: 200;
+}
+
+.menues, .merienda{
+    width: 20%;
+    margin: 10px;
+    background-color:#0D310F ;
+    padding: 10px;
+    border-radius: 0.5rem;
+    flex-direction: column;
+    display: flex;
+}
+
+
+
+
+.precioItemNum{
+    font-weight: 400;
+}
+#fechaMenu{
+    width: 70%;
+}
+
+.fotoItem{
+    border-radius: 0.5rem;
+    width: 100%;
+}
+
+.container{
+    width: 100%;
+    align-items: center;
+}
+
+
+
+.botonQuitarDelCarrito{
+    color:white;
+    background-color: #1b5e20;
+    width: 100%;
+}
+.nombreProductos{
+    width: 85%;
+}
+.precioProductos{
+    width: 15%;
+    float: right;
+}
+.nombrePrecioProducto{
+    display: flex;
+    flex-direction: row;
+    height: 75%;
+}
+.contenedorTotal{
+    display: flex;
+}
+#app{
+    display:none;
+}
+.totalI{
+    width: 90%;
+    border: 1px #fff;
+    border-style: solid none dotted none;
+    border-width: 1px 0px 1px 0px
+}
+.totalD{
+    width: 10%;
+    border: 1px #fff;
+    border-style: solid none dotted none;
+    border-width: 1px 0px 1px 0px
+}
+.prod{
+    border: 1px dotted #fff;
+    border-width: 0px 0px 1px 0px
+}
+.items{
+    font-weight: 600;
+}
+.itemId{
+    font-weight: 300;
+}
+
+
+
+
+
+#botonSelectorComensal{
+    background-color: #091e0a;
+    color:white;   
+
+}
+
+.dropdown-menu{
+    height: 100%;
+    border:0px;
+    color:#fff;
+    width: 100%;
+    background-color: #091e0a;
+    border-color: #091e0a;
+    max-height: 13rem;
+    overflow-x: auto;
+    overflow-y: auto;
+    text-align: center;
+    width: 100% /*el largo contando el padding y width*/
+}
+
+.fotoItem{
+    width: 100%;
+    border-radius: 0.5rem;
+}
+
+.letraMenu{
+    font-weight: 700;
+}
+
+.nombreUsuario{
+    font-weight: 700;
+}
+#saldo{
+    font-weight: 200;
+}
+
+
+
+
+
+.btnCatalogoUser{
+    color:white;
+    background-color: #1b5e20;
+    width: 100%;
+}
+
+
+.contenedorTabla {
+    height: 33rem;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    margin-left: 6rem;
+}
+
+th {
+    background-color: #062808 !important;
+    border: none;
+    color:white !important;
+    font-size: 3vh;
+}
+td {
+    background-color: #1b5e20 !important;
+    border: none;
+    color:white !important;
+    font-size: 2.5vh;
+    vertical-align: middle;
+}  
+
+.contenedorCarrito{ 
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+
+
+
+  
+
+
+/*Pagina Recepcion*/
+.contenedorTexto{
+    padding: 10px;
+}
+#logoVerdeNoTenedor{
+    width: 20vw;
+}
+#tituloMikuna{
+    font-size:10vw;
+}
+
+#inputNombreYApellido{
+  font-size:1.6vw;
+  color: white;
+  margin-top: 1rem;
+  background-color: #091e0a;
+  border-color: #091e0a;
+}
+#botonGuardar{
+    color:white;
+    background-color: #1b5e20;
+    margin-top:3rem;
+    font-size: 1.6vw;
+}
+.contenedorLogoTexto{
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+.cajaNombreYApellido{
+    border-radius: 0.5rem;
+    background-color: #0d310f;
+    padding:10px 
+}
+.bienvenido{
+    font-weight: 500;
+    font-size:1.6vw;
+}
+.textoBienvenida{
+    font-size:2vw;
+}
+#nombreApellido{
+    font-size:1.6vw;
+    font-weight: 500;
+}
+
+.contenedorPaginaInicial{
+    display:flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+  
+}
+.paginaInicial{
+    width: 40%;
+    height: 80%;
+    display:flex;
+    flex-direction: column;
+    color: white;
+    font-family: 'Roboto';
+}
+/*Seccion Sidebar e icono carrito*/
+
+.logoConTenedorNav {
+    width: 6.5vw;
+    height: 6.5vw;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.iconoSidebarGreen {
+    color: #1B5E20;
+    font-size: 4vw;
+}
+.iconoSidebarGreen:hover {
+    color: #30a438;
+}
+
+.iconoSidebarGray {
+    color: #65646A;
+    font-size:4vw;
+}
+
+.iconoSidebarGray:hover {
+    color: rgba(255, 255, 255, 1);
+}
+  
+.sidebar {
+    height: 100%;
+    width: 6.5vw;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #0D310F;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; 
+    text-align: center;
+}
+.logoVerde{
+    position:fixed;
+    top: 0;
+}
+
+/*Seccion Resumen de Ordenes*/
+.botonEliminarPedido{
+    color:white;
+    background-color: #0d310f;
+    width: 100%;
+}
+.tdDerecha{
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+  
+.tdIzquierda{
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.contenedorTituloOrdenes{
+    width: 80%;
+    display: flex;
+}
+.contenedorTituloOrdenes h1{
+    border-bottom: 3px solid  white;
+}
+.contenedorOrdenes{
+    margin-left: 3vw;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ordenesPendientes, .ordenesRealizadas{
+    overflow-x:auto;
+    padding: 2vw;
+    background-color: #062808;
+    border-radius: 10px;
+}
+.contenedorResumenDeCompra{
+    padding-top: 5vw;
+    flex-direction: row;
+    justify-content: center;
+    flex-direction: column;
+    display: none;
+}
+.ordenesRealizadas, .ordenesPendientes{
+    width: 80%;
+    margin: 0 auto;
+}
+table {
+    border-collapse: separate;
+    border-spacing: 0 0.2rem; 
+  }
+.botonEliminarPedido{
+    background-color: #0D310F;
+}  
+
+/*Seccion User*/
+#inputNombreYApellidoComensal,#inputCursoComensal{
+    color: white;
+    background-color: #091e0a;
+    border-color: #091e0a;
+}
+#contenedorComboComensalesUser {
+    height: 100%;
+    width: 100%;
+}
+#contenedorComboComensalesUser ul {
+    height: auto; 
+  }
+#contenedorComboComensalesUser .dropdown-menu {
+    height: 100%;
+    max-height: none; 
+    overflow: auto;
+}
+
+.modal-header, .modal-body{
+    background-color: #1b5e20;
+    border-color: black;
+}
+#botonCerrarModal{
+    color:white;
+    background-color: #091e0a;
+    border-color: #091e0a;
+    border-radius: 0.5rem;
+}
+#botonAgregarComensal{
+    color:white;
+    background-color: #0D310F;
+    border-radius: 0.5rem;
+    border-color: #0D310F;
+}
+.catalogoUser{
+    width: 90%;
+    margin-left: 6rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.contenedorUser{
+    justify-content: center;
+    align-items: center;
+    color:white;
+    margin: 1rem;
+    display: none;
+}
+
+.perfil {
+    color:white;
+    width: 75%;
+    height: 100%;
+    margin: 7vw auto 0 auto;
+    background-color:#0D310F ;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    display:flex;
+}
+.contenedorComensales{
+    max-width: 100%;
+}
+.nombreUsuario{
+    font-size: 3vh;
+    font-weight: 700;
+}
+.saldoRestante{
+    font-size:2.5vh;
+}
+.contenedorMensaje{
+    padding: 1rem;
+    width: 45%;
+}
+
+.active{
+    color: #1B5E20;
+}
+#comboComensalesUser .dropdown-item {
+    color: white;
+}
+#comboComensalesUser .dropdown-item:active {
+    background-color: green;
+}
+#comboComensalesUser .dropdown-item.active {
+    background-color: #1B5E20;
+}
+#comboComensalesUser .dropdown-item:hover {
+    background-color: #1b5e20;
+}
+#contenedorComboComensalesUser {
+    height: 100%;
+    width: 100%;
+}
+#contenedorComboComensalesUser ul {
+    height: auto; 
+  }
+#contenedorComboComensalesUser .dropdown-menu {
+    height: 100%;
+    max-height: none; 
+    overflow: auto;
+}
+  
+
+li{
+    background-color: #0d310f;   
+    border-color: #0d310f;
+    border-radius: 0.5rem;
+    color: white;
+}
+a{
+    color: aliceblue;
+}
+
+/*Seccion Menu*/
+.parteSuperior{
+    margin-top: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+}
+.infoUserFecha{
+    background-color: #0D310F;
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    border-radius: 0.5rem;
+    justify-content: space-evenly;
+}
+.fechaComensal{
+    width: 45%;
+}
+.fecha{
+    background-color: #1B5E20;
+    padding: 10px;
+    margin: 10px;
+    height: 40%;;
+    width: 100%;
+    border-radius: 0.5rem;
+}
+#contenedorFecha h2{
+    font-size: 2.4vw;
+}
+.row{
+    width: 100%;
+    justify-content: center;
+}
+
+
+.letraMenu{
+    font-weight: 700;
+    font-size:1.8vw
+}
+.letraMenuSpan{
+    font-weight: 400;
+    font-size:1.7vw;
+}
+.menues, .merienda{
+    width: 20%;
+    margin: 10px;
+    background-color:#0D310F ;
+    padding: 10px;
+    border-radius: 0.5rem;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-evenly;
+}
+.contenedorComensalMenu{
+    margin-top: 10px;
+    margin-left: 10px;
+    float: right;
+    width:50%;
+    overflow-x: hidden;
+}
+.contenedorComboComensales{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding:0 5px;
+    align-items: center; 
+    justify-content: center; 
+}
+
+#contenedorComboComensalesMenu{
+    height: 100%;
+}
+#contenedorComboComensalesMenu ul {
+    height: auto; 
+  }
+#contenedorComboComensalesMenu .dropdown-menu {
+    height: 100%;
+    max-height: none; 
+    overflow: auto;
+}
+#botonAgregarFondos{
+    color:white;
+    background-color: #0d310f;
+    width: 100%;
+}
+.infoUser{
+    background-color: #1B5E20;
+    width: 100%;
+    max-height: 60%;
+    margin:10px;
+    padding: 10px;
+    border-radius: 0.5rem;
+ }
+.botonesYFecha{
+    display: flex;
+    flex-direction: row;
+}
+.botonesYFecha button{
+    padding: 4px 8px;
+}
+#botonDiaMas, #botonDiaMenos{
+    color:white;
+    background-color: #0D310F;
+}
+.dropdown-menu{
+    z-index: 0;
+}
+
+#comboComensalesMenu .dropdown-item {
+    color: white;
+}
+#comboComensalesMenu .dropdown-item:active {
+    background-color: green;
+  }
+#comboComensalesMenu .dropdown-item.active {
+    background-color: #1B5E20;
+}
+#comboComensalesMenu .dropdown-item:hover {
+    background-color: #1b5e20;
+}
+.catalogo{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.menuAlternativo{
+    width: 90%;
+}
+.meriendas{
+    width: 90%;
+}
+.listaMeriendas, .contenedorMenues{
+    margin-top:50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.tituloMeriendas h2, .tituloMenuesAlt h2 {
+    border-bottom: 3px solid  white;
+}
+.nombreItem, .precioItem{
+    font-weight: 600;
+    font-size: 3vh;
+}
+
+/*Seccion Carrito*/
+
+.contenedorCarritoDeCompras{
+    width: 100%;
+    margin-top: 7vw;
+    flex-direction: column;
+}
+.carritoDeCompras{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.contenedorTituloCarrito h1{
+    border-bottom: 3px solid  white;
+}
+.contenedorBodyCarrito{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    width: 80%;
+    min-height: 70vh;
+}
+.resumen{
+    display: flex;
+    flex-direction: column;
+    width: 49%;
+    background-color: #1b5e20;;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-sizing: border-box; 
+    overflow:visible;
+    min-height: 10vh;
+    justify-content: space-between;
+}
+.resumen h2{
+    font-size: 5vh;
+}
+.contenidosCarrito{
+    display: flex;
+    width:49%;
+    background-color: #1b5e20;;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    box-sizing: border-box; 
+}
+
+#botonPagar{
+    background-color: #0D310F;
+    width: 100%;
+    color: white;
+}
+.producto{
+    width: 45%;
+    margin: 0 auto;
+    margin-top: 1rem;
+    background-color:#0D310F ;
+    padding: 10px;
+    border-radius: 0.5rem;
+    flex-direction: column;
+    display: flex;
+}
+
+
+@media screen and (max-width: 900px) {
+    .contenedorCarritoDeCompras, .contenedorMenu{
+        margin: 0 auto;
+        margin-top: 6.9rem;
+    }
+    .parteSuperior{
+        flex-direction: column;
+        margin-top: 17vw;
+    }
+    #nombreApellido{
+        font-size: 3.2vw;
+    }
+    #botonGuardar{
+        font-size: 3.2vw;    
+    }
+    #inputNombreYApellido{
+        font-size: 3.2vw;
+    }
+    .bienvenido{
+        font-size:3.2vw;
+    }
+    .textoBienvenida{
+        font-size:4.8vw;
+    }
+    .infoUserFecha{
+        width: 80%;
+    }
+    .menuDelDia{
+        width: 80%;
+    }
+    .logoVerde{
+        margin-top: 3px;
+        left:0;
+    }
+    label{
+        font-size: 10px;
+    }
+    .menues, .merienda, .producto{
+        width: 40%;
+        margin: 0 auto;
+        margin-top: 1rem;
+    }
+    .sidebar {
+        width: 100%;
+        height: 13vw;
+        position: fixed;
+        margin-top: 0;
+        top:0;
+        overflow: hidden;
+        flex-direction: row;
+        z-index: 1;
+        justify-content: center; 
+        align-items: center;
+    }
+    .botones{
+        width: 60%;
+    }
+    
+    .iconoSidebarGreen {
+        font-size: 8vw;
+    }
+    .iconoSidebarGray {
+        font-size: 8vw;
+    }
+    .logoConTenedorNav {
+        width: 12vw;
+        height: 12vw;
+    }
+    .contenedorCarrito{
+        margin-top: -7px;
+        z-index: 2;
+    }
+    .dropdown-menu{
+        width: calc(100% - 1rem) !important; /*el largo contando el padding*/
+    }
+    .paginaInicial{
+        width: 80%;
+    }
+
+    .perfil{
+        margin: 20vw auto 0 auto;
+        flex-direction: column;
+    }
+    #contenedorMensaje{
+        padding: 1rem;
+        width:100%;
+    }
+    #catalogoUser{
+        margin-left: 0;
+    }
+    .btn{
+        font-size:2vh;
+    }
+    h2{
+        font-size:3.6vh;
+    }
+    th {
+        font-size: 1.7vh;
+    }
+    td {
+        font-size: 2vh;
+    }  
+    .contenedorOrdenes{
+        margin-left: 0;
+        margin-top: 13vw;
+    }
+    h1{
+        font-size: 8vw;
+    }
+    #contenedorFecha h2{
+        font-size: 4.2vw;
+    }
+    .botonesYFecha button{
+        padding: 4px 10px;
+    }
+    .saldoRestante{
+        font-size:1.7vh;
+    }
+    .letraMenu{
+        font-size: 2.4vh;
+    }
+    .letraMenuSpan{
+        font-size: 2.2vh;
+    }
+    .nombreItem, .precioItem{
+        font-size: 3=2vh;
+    } 
+    .menuAlternativo{
+        width: 100%;
+    }
+    .meriendas{
+        width: 100%;
+    }
+    .ordenesRealizadas, .ordenesPendientes{
+        width: 95%;
+    }
+    .contenedorBodyCarrito{
+        flex-direction: column;
+    }
+    .contenidosCarrito, .resumen{
+        margin-top: 1rem;
+        width: 100%;
+        min-height: 40vh;
+    }
+    .contenedorTituloOrdenes{
+        width: 90%;
+    }
+}
