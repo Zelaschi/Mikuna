@@ -46,8 +46,8 @@ También para facilitar partes del trabajo donde es útil escribir e ir avanzand
 extensión del programa "Visual Studio Code" llamada "Live Share", donde podemos editar el mismo archivo en vivo y agregar notas sobre partes que vamos realizando o mejorando 
 al mismo tiempo.
 
-![Commits-1](/github-1.png)
-![Commits-2](/github-2.png)
+![Commits-1](.docs/github-1.png)
+![Commits-2](docs/github-2.png)
 
 
 # Elicitación
