@@ -1,9 +1,2 @@
 - handle comensal repetido cuando agregarndo
-- que se deje de ver como una basura
 - cambiar todos los alerts por algo mas lindo
--que cuando no hay ordenes pendientes o realizadas que ponga q 
-no hay
--no esta agarrando bien el nene seleccionado para mostrarlo en 
-ordenes realizadas una vez q se paga el carritp
--introducir pedido id 
-- carrito y pedido en forma d diccionario

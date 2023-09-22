@@ -1,4 +1,5 @@
 export class Cantina {
+    idPedido
     _listaPedidos
     listaMenues
     listaMeriendas
@@ -10,6 +11,7 @@ export class Cantina {
         this.listaMeriendas=[];
         this._listaSocios=[];
         this.listaMenuesDelDia=[];
+        this.idPedido = 0;
     }
     sacarPedido(indice){
         this._listaPedidos.splice(indice-1,1);
@@ -88,6 +90,11 @@ export class Cantina {
     }
     getListaMenues(){
         return this.listaMenues;
+    }
+    getPedidoId(){
+        let idPedido= this.idPedido;
+        this.idPedido++;
+        return idPedido;
     }
 }
 

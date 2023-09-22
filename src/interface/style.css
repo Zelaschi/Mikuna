@@ -740,6 +740,9 @@ a{
         margin: 0 auto;
         margin-top: 6.9rem;
     }
+    a{
+        font-size:2.6vw;
+    }
     .parteSuperior{
         flex-direction: column;
         margin-top: 17vw;

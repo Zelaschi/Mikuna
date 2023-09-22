@@ -2,18 +2,18 @@
   "name": "obl-fis",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": " .js",
   "directories": {
     "doc": "docs"
   },
   "scripts": {
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage",
-    "start": "live-server",
-    "_comentario":" npm start para iniciar servidor local para ver la pagina"
+    "start": "live-server"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.18.2",
     "jest": "^29.5.0"
   },
   "devDependencies": {

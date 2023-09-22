@@ -46,8 +46,8 @@ También para facilitar partes del trabajo donde es útil escribir e ir avanzand
 extensión del programa "Visual Studio Code" llamada "Live Share", donde podemos editar el mismo archivo en vivo y agregar notas sobre partes que vamos realizando o mejorando 
 al mismo tiempo.
 
-![Commits-1](.docs/github-1.png)
-![Commits-2](docs/github-2.png)
+![Commits-1](github-1.png)
+![Commits-2](github-2.png)
 
 
 # Elicitación
@@ -126,12 +126,12 @@ Se pudieron identificar estas funcionalidades de interés:
 * La aplicación debe de contar con un sistema para contratar el menú para un tiempo estipulado y debe notificar al usuario cuando este tiempo se esté terminando.
 ## Caracterización de usuarios
 
-![Usuario Jose](/UserJose.png)
-![Usuario Maria](/UserMaria.png)
-![Usuario Daniela](/UserDaniela.png)
+![Usuario Jose](UserJose.png)
+![Usuario Maria](UserMaria.png)
+![Usuario Daniela](UserDaniela.png)
 
 ## Modelo conceptual
-![Modelo conceptual](/ModeloConceptual.png)
+![Modelo conceptual](ModeloConceptual.png)
 
 # Especificación
 
@@ -467,16 +467,16 @@ Se pudieron identificar estas funcionalidades de interés:
 # Bocetos UI
 
 ## Registrarse:
-![registrarse](/registrarse.png)
+![registrarse](registrarse.png)
 
 ## Iniciar sesion:
-![iniciar](/iniciar.png)
+![iniciar](iniciar.png)
 
 ## Vista del menú:
-![menu](/menu.png)
+![menu](menu.png)
 
 ## Vista de órdenes:
-![ordenes](/ordenes.png)
+![ordenes](ordenes.png)
 
 # Validación
 ## Validar la especificación

@@ -23,6 +23,7 @@ let mesSelect=mes;
 let añoSelect=año;
 hoy= dia+"/"+mes+"/"+año;
 let fechaSeleccionada=hoy;
+let cantPedidosPendientes=0;
 
 function inicio(){
     if(!user.getDefinido()){
@@ -103,6 +104,7 @@ function cargarOrdenes(){
   tablaPend.innerHTML="";
   tablaReal.innerHTML="";
   let i=1;
+  cantPedidosPendientes=0;
   for(let elem of pedidos){
     if(!yaPaso(elem.getFecha())){
       let tr= document.createElement("tr");
@@ -134,6 +136,7 @@ function cargarOrdenes(){
       })(i));
       tdBoton.appendChild(boton);
       tr.appendChild(tdBoton);
+      cantPedidosPendientes++ ;
     }else{
       let tr= document.createElement("tr");
       tablaReal.appendChild(tr);
@@ -154,6 +157,23 @@ function cargarOrdenes(){
     }
     i++;
   }
+  if(cantPedidosPendientes==0){
+    let tr= document.createElement("tr");
+      tablaPend.appendChild(tr);
+      let td1= document.createElement("td");
+      td1.classList.add("tdIzquierda");
+      td1.textContent="No hay Ordenes Pendientes"
+      tr.appendChild(td1);
+      let td2= document.createElement("td");
+      tr.appendChild(td2);
+      let td3= document.createElement("td");
+      tr.appendChild(td3);
+      let td4= document.createElement("td");
+      tr.appendChild(td4);
+      let td5= document.createElement("td");
+      td5.classList.add("tdDerecha");
+      tr.appendChild(td5);
+  }
 }  
 // PRE: Recibe el indice de los pedidos por orden de antiguedad y el precio 
 // POS: Saca de la lista de pedidos pendientes deel usuario y devuelve el monto por el articulo
@@ -173,16 +193,12 @@ function cargarSaldo(){
 function pagar(){
   if(!carrito.estaVacio()){
     if(carrito.getTotal()<user.getSaldo()){
-      let listaComensales= carrito.getListaComensal();
-      let fechas=carrito.getFechasPedidos();
-      let productos=carrito.getListaProductos();
-      let i=0;
-      for (let elem of productos){
-        let pedido= new Pedido(fechas[i],elem,listaComensales[i]);
+      let pedidosPendientes= carrito.getListaPedidosARealizar();
+      for (let elem of pedidosPendientes){
         user.restarSaldo(elem.getPrecio());
         cargarSaldo();
-        cantina.agregarPedido(pedido);
-        user.agregarPedido(pedido)
+        cantina.agregarPedido(elem);
+        user.agregarPedido(elem)
       }
       carrito.vaciarCarrito();
       actualizarCarrito();
@@ -198,14 +214,14 @@ function pagar(){
 }
 
 function agregarCarritoYActualizarlo(comensal,fecha,producto){
-  carrito.agregarAlCarrito(comensal,fecha,producto);
+  let pedidoId=cantina.getPedidoId();
+  let pedido = new Pedido(fecha,producto,comensal,pedidoId);
+  carrito.agregarAlCarrito(pedido);
   actualizarCarrito();
 }
 
 function actualizarCarrito(){
-    let listaComensal=carrito.getListaComensal();
-    let listaProd= carrito.getListaProductos();
-    let fechas= carrito.getFechasPedidos();
+    let listaPedidosPendientes = carrito.getListaPedidosARealizar();
     let divNom= document.getElementById("resumenNombres");
     divNom.innerHTML="";
     let divPre=document.getElementById("resumenPrecios");
@@ -213,23 +229,23 @@ function actualizarCarrito(){
     let divs=document.getElementById("rowCarrito")
     divs.innerHTML="";
     let i=0;
-    for(let elem of listaProd){
+    for(let elem of listaPedidosPendientes){
       let p1= document.createElement("p");
       p1.textContent="$";
       p1.classList.add("prod");
       let span= document.createElement("span");
-      span.textContent=listaProd[i].getPrecio();
+      span.textContent=elem.getItem().getPrecio();
       p1.appendChild(span);
       divPre.appendChild(p1);
       let p2=document.createElement("p");
-      p2.textContent=elem.toString();
+      p2.textContent=elem.getItem().toString();
       p2.classList.add("prod");
       divNom.appendChild(p2);
       let divProd=document.createElement("div");
       divProd.classList.add("producto");
       divs.appendChild(divProd);
       let nombre=document.createElement("p");
-      nombre.textContent=elem.toString();
+      nombre.textContent=elem.getItem().toString();
       nombre.classList.add("items");
       divProd.appendChild(nombre);
       let precio=document.createElement("p");
@@ -237,7 +253,7 @@ function actualizarCarrito(){
       precio.textContent="Precio: $";
       let spanP= document.createElement("span");
       spanP.classList.add("itemId");
-      spanP.textContent=elem.getPrecio();
+      spanP.textContent=elem.getItem().getPrecio();
       precio.appendChild(spanP);
       divProd.appendChild(precio);
       let fecha=document.createElement("p");
@@ -245,7 +261,7 @@ function actualizarCarrito(){
       fecha.textContent="Fecha: ";
       let spanF= document.createElement("span");
       spanF.classList.add("itemId");
-      spanF.textContent=fechas[i];
+      spanF.textContent=elem.getFecha();
       fecha.appendChild(spanF);
       divProd.appendChild(fecha);
       let comensal =document.createElement("p");
@@ -253,18 +269,18 @@ function actualizarCarrito(){
       comensal.textContent="Comensal: ";
       let spanC=document.createElement("span");
       spanC.classList.add("itemId");
-      spanC.textContent=listaComensal[i];
+      spanC.textContent=elem.getComensal();
       comensal.appendChild(spanC);
       divProd.appendChild(comensal);
       let boton =document.createElement("button");
       boton.setAttribute("type","button");
       boton.classList.add("btn");
       boton.classList.add("botonQuitarDelCarrito");
-      boton.addEventListener("click", (function(comensal,fecha,elem) {
+      boton.addEventListener("click", (function(elem) {
         return function() {
-          sacarDelCarritoYActualizarlo(comensal,fecha,elem);
+          sacarDelCarritoYActualizarlo(elem);
         }
-      })(listaComensal[i],fechas[i],elem,));
+      })(elem));
       boton.textContent="Quitar del Carrito";
       divProd.appendChild(boton);
       i++;
@@ -272,8 +288,8 @@ function actualizarCarrito(){
   let total=document.getElementById("totalNumero");
   total.textContent=carrito.getTotal();
 }
-function sacarDelCarritoYActualizarlo(comensal,fecha,producto){
-  carrito.sacarDelCarrito(comensal,fecha,producto);
+function sacarDelCarritoYActualizarlo(pedido){
+  carrito.sacarDelCarrito(pedido);
   actualizarCarrito();
 }  
 //POS: pone en el html el menu del dia asignado para el dia seleccionado
