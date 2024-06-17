@@ -37,6 +37,5 @@ El proyecto trataba de hacer una web con un solo archivo html por la cual el usu
 - Bootstrap
 - Jest
 
-# Actualmente
-En el momento me encuentro aprendiendo acerca de node.js para poder montar el servidor sin live server y poder conectarlo con una base de datos para hacer una implementación mas realista.
+
 
